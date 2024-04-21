@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "QR-link",
+  "version": "0.1",
+
+  "description": "Gives a window with QR-link to a current site (address row)",
+
+  "icons": {
+    "48": "logo_48.png",
+    "96": "logo_96.png"
+  },
+
+  "permissions": ["activeTab"],
+
+  "browser_action": {
+    "default_icon": "logo_48.png",
+    "default_title": "QR link",
+    "default_popup": "popup/qr_window.html"
+  }
+}
