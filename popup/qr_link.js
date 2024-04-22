@@ -10,9 +10,11 @@ let qrcode = new QRCode(
     }
 );
 
-browser.tabs.query({active: true, lastFocusedWindow: true})
-    .then((it) => {
+chrome.tabs.query(
+    {active: true, lastFocusedWindow: true},
+    (it) => {
             qrcode.clear();
             qrcode.makeCode(it[0].url);
             console.log("generated for: " + it[0].url)
-    });
+    }
+);
